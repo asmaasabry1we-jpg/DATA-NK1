@@ -36,17 +36,19 @@ body {
     color: #0d6efd !important;
 }
 
-/* 3. الهيدر (Hero Image) */
+/* 3. الهيدر (Hero Image) - الجزء المعدل ليملأ الصفحة */
 .hero-container {
     width: 100%;
-    background-color: #f8f9fa;
-    text-align: center;
-    padding: 20px 0;
+    margin: 0;
+    padding: 0; /* تم حذف padding لضمان الالتصاق بالحواف */
+    line-height: 0; /* لمنع وجود مسافة تحت الصورة */
 }
 
 .main-header-img {
-    max-width: 300px; /* تصغير اللوجو الكبير في الهيدر ليكون متناسقاً */
+    width: 100vw; /* تجعل الصورة تأخذ عرض الشاشة بالكامل */
+    max-width: 100%; /* ضمان عدم خروجها عن الإطار */
     height: auto;
+    display: block;
 }
 
 /* 4. عناوين الأقسام */
@@ -122,7 +124,7 @@ body {
 
 .polaroid img {
     width: 100%;
-    height: 250px; /* مقاس موحد للصور */
+    height: 250px; /* مقاس موحد للصور كما هو في كودك الأصلي */
     object-fit: cover; /* لضمان عدم تمدد الصورة */
     display: block;
 }
