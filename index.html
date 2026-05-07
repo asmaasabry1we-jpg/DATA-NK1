@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>جمعية DATA | التنمية والتكنولوجيا</title>
+    <!-- CSS Links -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.rtl.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<!-- Nav Bar المعدل -->
+<nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top shadow-sm">
+    <div class="container d-flex justify-content-center"> <!-- التمركز هنا -->
+        <div class="nav-wrapper d-flex align-items-center w-100 justify-content-between">
+            
+            <!-- اللوجو -->
+            <a class="navbar-brand" href="#home">
+                <img src="images/data.png" alt="DATA Logo" style="height: 60px; width: auto;">
+            </a>
+
+            <!-- زر الموبايل -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- الروابط -->
+            <div class="collapse navbar-collapse flex-grow-0" id="navbarNav">
+                <ul class="navbar-nav gap-3"> <!-- gap-3 تتحكم في المسافة بين الروابط -->
+                    <li class="nav-item"><a class="nav-link fw-bold" href="#home">الرئيسية</a></li>
+                    <li class="nav-item"><a class="nav-link fw-bold" href="#about">من نحن</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle fw-bold" href="#" id="projectsDrop" data-bs-toggle="dropdown">المشروعات</a>
+                        <ul class="dropdown-menu shadow border-0">
+                            <li><a class="dropdown-item text-end" href="#projects" onclick="showSector('dev', event)">قطاع التنمية</a></li>
+                            <li><a class="dropdown-item text-end" href="#projects" onclick="showSector('tech', event)">قطاع التكنولوجيا</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a class="nav-link fw-bold" href="#partners">شركاؤنا</a></li>
+                    <li class="nav-item"><a class="nav-link fw-bold" href="#contact">تواصل معنا</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</nav>
+    <!-- Hero Header -->
+    <header id="home" class="hero-container">
+        <img src="images/data.png" alt="DATA Association" class="main-header-img">
+    </header>
+
+    <!-- Section: About Us (من نحن) -->
+    <section class="py-5 bg-light" id="about">
+        <div class="container">
+            <h2 class="fw-bold text-center section-title mb-5 text-dark">من نحن</h2>
+            <div class="row g-4 text-dark">
+                <div class="col-lg-4">
+                    <div class="about-card p-4 shadow-sm bg-white rounded-4 text-center h-100">
+                        <i class="fas fa-handshake fs-1 text-primary mb-3"></i>
+                        <h4 class="fw-bold">من نحن</h4>
+                        <p>جمعية أهلية رائدة بنجع خميس تهدف لتحسين جودة الحياة من خلال التنمية والابتكار.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="about-card p-4 shadow-sm bg-white rounded-4 text-center h-100">
+                        <i class="fas fa-lightbulb fs-1 text-warning mb-3"></i>
+                        <h4 class="fw-bold">رؤيتنا</h4>
+                        <p>أن نصبح المركز الأول للتحول الرقمي والخدمات التكنولوجية في صعيد مصر.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="about-card p-4 shadow-sm bg-white rounded-4 text-center h-100">
+                        <i class="fas fa-rocket fs-1 text-danger mb-3"></i>
+                        <h4 class="fw-bold">رسالتنا</h4>
+                        <p>تمكين الشباب والمرأة وتوفير الحلول التقنية الحديثة لكل فئات المجتمع.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section: Projects (المشروعات) -->
+    <section class="py-5 bg-white" id="projects">
+        <div class="container">
+            <h2 class="mb-5 fw-bold text-center section-title text-dark">المشروعات</h2>
+
+            <!-- Development Sector (التنمية - 8 مشاريع) --><div class="container text-center mb-5">
+    <div class="d-flex justify-content-center gap-3">
+        <button class="btn-sector active" id="btn-dev" onclick="showSector('dev')">
+            <i class="fas fa-users-cog ms-2"></i> قطاع التنمية
+        </button>
+        
+        <button class="btn-sector" id="btn-tech" onclick="showSector('tech')">
+            <i class="fas fa-desktop ms-2"></i> قطاع التكنولوجيا
+        </button>
+    </div>
+</div>
+            <div id="dev-sector" class="sector-content active">
+                
+                <div class="horizontal-project">
+                    <div class="project-card-row"><div class="p-img"><div class="polaroid rotate-left"><img src="images/asmaa1.jpeg"></div></div><div class="p-info text-dark"><h3>مشروع زهرات رقميات</h3><p>مشروع "زهرات رقميات" ممول من PPI ضمن مشروع مشاركة المجتمع المدني نحو التنمية المستدامة بمصر. ويهدف إلي رفع المهارات الرقمية لدى الفتيات والنساء ورفع الوعي الرقمي بالمجتمع ونشر ثقافة الاستخدام الآمن للإنترنت، وخلق قدوات كنماذج ناجحة في مجال تكنولوجيا المعلومات.</p></div></div><hr class="project-divider">
+                </div>
+                <div class="horizontal-project">
+                    <div class="project-card-row flex-row-reverse"><div class="p-img"><div class="polaroid rotate-right"><img src="images/asmaa2.jpg"></div></div><div class="p-info text-dark"><h3>مشروع تشغيل الشباب في حملات النظافة البيئية</h3><p>مشروع ممول من الصندوق الاجتماعي للتنمية بمنحة من الاتحاد الأوربي. ويهدف الي تشغيل الشباب فى مبادرات تحسين الوضع الصحى والبيئى للارتقاء بالحالة الصحية فى المجتمعات المستهدفة.  </p></div></div><hr class="project-divider">
+                </div>
+                <div class="horizontal-project">
+                    <div class="project-card-row"><div class="p-img"><div class="polaroid rotate-left"><img src="images/asmaa3.jpg"></div></div><div class="p-info text-dark"><h3>بناء المجمع الإسلامي</h3><p>تم إنشاء المجمــع الإسلامى بالتعـاون مع أهل الخير بالقرية بتكلفة 257.000 جنيه مصري. ويضم المجمع مسجد ومصلى نساء ومبنى الجمعية.</p></div></div><hr class="project-divider">
+                </div>
+                <div class="horizontal-project">
+                    <div class="project-card-row flex-row-reverse"><div class="p-img"><div class="polaroid rotate-right"><img src="images/asmaa4.jpg"></div></div><div class="p-info text-dark"><h3>التعاون مع هيئة كير الدولية</h3><p>مشروع توصيل مياه الشرب للمنازل.
+مشروع الصرف الصحي منخفض التكاليف.  
+مشروع الرعاية الصحية لأسر شريحة العمالة الغير منتظمة بالقرية.
+استفاد من المشروعات 147 أسرة بإجمالي تكلفة 130 ألف جنية.</p></div></div><hr class="project-divider">
+                </div>
+                <div class="horizontal-project">
+                    <div class="project-card-row"><div class="p-img"><div class="polaroid rotate-left"><img src="images/asmaa5.jpg"></div></div><div class="p-info text-dark"><h3>مكافحة التسرب من التعليم</h3><p>بالتعاون مع البنك الدولي والاتحاد الاوروبي قامت الجمعية بحصر الطلبة وإعادة تهيئتهم للدخول فى الدراسة من جديد بتوفير الملابس والمصروفات.
+
+تم تنفيذ المشروع بالتعاون مع مدرسة النصر والعبور والندافين الابتدائية.
+
+استضافة مدرسة من ذات الفصل الواحد بمقر الجمعية واستكمال تنفيذ المشروع بالتعاون مع (البروج – العبابدة )
+
+  تم إنشاء صندوق التكافل من أجل التعليــم والذى يقوم على جمع  التبرعات من الأهالى لإنفاقها فى مكافحة التسرب من التعليم.</p></div></div><hr class="project-divider">
+                </div>
+                <div class="horizontal-project">
+                    <div class="project-card-row flex-row-reverse"><div class="p-img"><div class="polaroid rotate-right"><img src="images/asmaa6.jpg"></div></div><div class="p-info text-dark"><h3>مكاتب تحفيظ القرآن الكريم</h3><p>تقوم الجمعية برعاية ثلاث مكاتب لتحفيظ القرآن الكريم وعمل احتفالية سنوية لتكريم الحفظة. تم تكريم 400 شاب وفتاة من عام 2005 حتى عام 2010.</p></div></div><hr class="project-divider">
+                </div>
+                <div class="horizontal-project">
+                    <div class="project-card-row"><div class="p-img"><div class="polaroid rotate-left"><img src="images/asmaa7.jpg"></div></div><div class="p-info text-dark"><h3>تطوير دار الحضانة</h3><p>تم تطوير دار الحضانة بتمويل من الصندوق الاجتماعى للتنمية ومديرية التضامن الاجتماعى بالأقصر بتكلفة 26,000 جنيه مصري.
+
+توفر دار الحضانه فرص عمل للفتيات وتحتوى على قاعات وألعاب تعليمية.</p></div></div><hr class="project-divider">
+                </div>
+                <div class="horizontal-project">
+                    <div class="project-card-row flex-row-reverse"><div class="p-img"><div class="polaroid rotate-right"><img src="images/asmaa8.jpg"></div></div><div class="p-info text-dark"><h3>تنمية المرأة الريفية</h3><p>روع تنمية المرأة الريفية مشغل للفتيات بالإضافة إلى أعمال حرفية ويدوية.
+
+كما يتم عقد ندوات توعية للفتيات.</p></div></div>
+                </div>
+            </div>
+
+            <!-- Technology Sector (التكنولوجيا - 14 مشروع) -->
+            <div id="tech-sector" class="sector-content"> 
+                <div class="horizontal-project"><div class="project-card-row"><div class="p-img"><div class="polaroid rotate-right"><img src="images/menaa1.jpg"></div></div><div class="p-info text-dark"><h3>مبادرة واعى لنشر الاستخدام الآمن للإنترنت</h3><p>مبادرة اطلقتها الجمعية ضمن فاعليات احتفالها باليوبيل الفضى (25 عام) على بدء مسيرتها فى تنمية المجتمع بكافة كياناته وفئاته. تهدف إلى رفع الوعى لدى الأطفال والشباب وأولياء الأمور بأهمية وكيفية استخدام الإنترنت بشكل آمن.</p></div></div><hr class="project-divider"></div>
+                <div class="horizontal-project"><div class="project-card-row flex-row-reverse"><div class="p-img"><div class="polaroid rotate-left"><img src="images/menaa2.jpg"></div></div><div class="p-info text-dark"><h3>إطلاق مبادرة كلاود 2020</h3><p>تم إطلاق مبادرة كلاود فى شهر أكتوبر 2017 . وتم تنفيذها فى مركز الطود – محافظة الأقصر ومن المستهدف تنفيذ المبادرة فى جميع مراكز المحافظة وعلى مستوى جمهورية مصر العربية.
+                    وتهدف المبادرة الي هدم الفجوة الرقمية بين الجيل الحالي المتنقن لأدوات التكنولوجيا والأجيال السابقة. وخلق شباب مؤهل لسوق العمل فى مجالات مختلفة باستخدام تكنولوجيا المعلومات.
+                </p></div></div><hr class="project-divider"></div>
+                <div class="horizontal-project"><div class="project-card-row"><div class="p-img"><div class="polaroid rotate-right"><img src="images/menaa3.jpg"></div></div><div class="p-info text-dark"><h3>اعتماد أكاديمية سيسكو</h3><p>عام 2017 تم اعتماد داتا نجع خميس لتصبح أكاديمة سيسكو تابعة للجهز المركزى للتعبئة العامة والإحصاء.
+
+تم تدريب واعتماد 10 مدربين من داتا نجع خميس كمدربين لمناهج سيسكو.</p></div></div><hr class="project-divider"></div>
+                <div class="horizontal-project"><div class="project-card-row flex-row-reverse"><div class="p-img"><div class="polaroid rotate-left"><img src="images/menaa4.jpg"></div></div><div class="p-info text-dark"><h3>إطلاق مبادرة بذور التكنولوجيا</h3><p>مبادرة تهدف إلى تعليم وتمكين النشئ بدءً من سن 7 سنوات وحتى 18 عام من ادوات تكنولوجيا المعلومات التى تجعلهم قادرين على ان يكونوا منتجين وليس مستخمين فقط لأدوات التكنولوجيا..</p></div></div><hr class="project-divider"></div>
+                <div class="horizontal-project"><div class="project-card-row"><div class="p-img"><div class="polaroid rotate-right"><img src="images/menaa5.jpg"></div></div><div class="p-info text-dark"><h3>برنامج رفع الكفاءة الإنتاجية للعاملين بالدولة</h3>
+                    <p>عام 2015 تم الاتفاق مع وزارة الاتصالات والجهاز المركزي للتعبئة العامة والإحصاء لتوفير أكثر من 84 تدريب مجاني للعاملين بالدولة.
+
+تم تدريب وتأهيل 200موظف على عدة برامج تدريبية مجانا حتى الان.</p></div></div><hr class="project-divider"></div>
+                <div class="horizontal-project"><div class="project-card-row flex-row-reverse"><div class="p-img"><div class="polaroid rotate-left"><img src="images/menaa6.jpg"></div></div><div class="p-info text-dark"><h3>الاحتفال باليوم العالمي للفتيات في تكنولوجيا المعلومات</h3>
+                    <p>من عام 2015 وحتى عام 2018، تم الاحتفال باليوم العالمي للفتيات في قطاع تكنولوجيا المعلومات والاتصالات، وهو حدث يهدف إلى مساعدة الفتيات والشابات على النجاح في المهن المتعلقة بالعلوم والتكنولوجيا والهندسة والرياضيات (STEM). إذ يتعين عليهن اكتساب المهارات اللازمة ليصبحن مستخدماتٍ ومبدعاتٍ في العالم الرقمي. وفي كل عام، يعمل الاتحاد الدولي للاتصالات (ITU) على إلهام الفتيات وتشجيعهن على السعي نحو مستقبلٍ أفضل في مجال تكنولوجيا المعلومات والاتصالات، وتمكينهن من خلال ضمان حصولهن على المهارات والثقة والدعم اللازمين لتحقيق أهدافهن.</p></div></div><hr class="project-divider"></div>
+                <div class="horizontal-project"><div class="project-card-row"><div class="p-img"><div class="polaroid rotate-right"><img src="images/menaa7.jpg"></div></div><div class="p-info text-dark"><h3>مبادرة كل مصر على النت</h3>
+                    <p>في عام 2015 تم التعاقد مع الصندوق المصرى لتكنولوجيا المعلومات وشركة ميكروسوفت لإعداد مدربين معتمدين فى مجال تكنولوجيا المعلومات.
+
+تم تدريب وتأهيل 15مدرب فى مجال تكنولوجيا المعلومات معتمدين من قبل شركة ميكروسوفت ضمن مبادرة كل مصر على النت.
+
+وايضاً تم تدريب 300 متدرب فى أساسيات الكمبيوتر وحصلوا على شهادة معتمدة من شركة ميكروسوفت.</p></div></div><hr class="project-divider"></div>
+                <div class="horizontal-project"><div class="project-card-row flex-row-reverse"><div class="p-img"><div class="polaroid rotate-left"><img src="images/menaa8.jpg"></div></div><div class="p-info text-dark"><h3>منحة معهد تكنولوجيا المعلومات (ITI)</h3><p>عام 2015 تم اعتماد بيت التكنولوجيا ليصبح إحدى مراكز علوم الحاسب التابع لمعهد تكنولوجيا المعلومات كأول جمعية يتم اعتمادها على مستوى المحافظة.
+
+تم تدريب وتأهيل 12 مدرب فى مجال تصميم المواقع معتمدين من معهد تكنولوجيا المعلومات ITI ووزارة الاتصالات.</p></div></div><hr class="project-divider"></div>
+                <div class="horizontal-project"><div class="project-card-row"><div class="p-img"><div class="polaroid rotate-right"><img src="images/menaa9.jpg"></div></div><div class="p-info text-dark"><h3>اعتماد شركة CERTIPORT</h3><p>في عام 2014 تم التوقيع على التعاقد الخاص باعتماد بيت التكنولوجيا لتقديم جميع الشهادات الخاصة بشركة CERTIPORT
+
+وتم توفير عدد 11 تدريب وامتحان متخصص بشهادات دولية فى مجال تكنولوجيا المعلومات .</p></div></div><hr class="project-divider"></div>
+                <div class="horizontal-project"><div class="project-card-row flex-row-reverse"><div class="p-img"><div class="polaroid rotate-left"><img src="images/menaa10.jpg"></div></div><div class="p-info text-dark"><h3>تنظيم المعرض المحلي للعلوم والهندسة ISEF </h3><p></p></div></div><hr class="project-divider"></div>
+                <div class="horizontal-project"><div class="project-card-row"><div class="p-img"><div class="polaroid rotate-right"><img src="images/menaa11.jpg"></div></div><div class="p-info text-dark"><h3>اعتماد أكاديمية اوراكل</h3><p>عام 2013 تم اعتماد بيت التكنولوجيا ليصبح أكاديمية اوراكل لتدريب الشباب على البرمجة .
+
+تم تدريب عدد 24 متدرب على البرمجة بلغة الجافا وتم تكريمهم من قبل سكرتير عام المحافظة و مستشار وزير الاتصالات د / أحمد درويش بقاعة المؤتمرات الدولية بالأقصر.</p></div></div><hr class="project-divider"></div>
+                <div class="horizontal-project"><div class="project-card-row flex-row-reverse"><div class="p-img"><div class="polaroid rotate-left"><img src="images/menaa12.jpg"></div></div><div class="p-info text-dark"><h3>برنامج Intel Learn Program</h3><p>في عام 2013 تم تدريب للاطفال على أساسيات الكمبيوتر بطريقة تعاونية شيقة تنمى لديهم روح الفريق ومشاركة المعلومات ضمن برنامج Intel Learn Program
+
+بيت التكنولوجيا بجمعية نجع خميس هو بيت التكنولوجيا الوحيد على مستوى محافظة الاقصر الذى يقدم هذا التدريب. حيث تم تدريب عدد 40 طفل (ذكور - إناث).</p></div></div><hr class="project-divider"></div>
+                <div class="horizontal-project"><div class="project-card-row"><div class="p-img"><div class="polaroid rotate-right"><img src="images/menaa13.jpg"></div></div><div class="p-info text-dark"><h3>تدريب الأساسيات اللازمة لاستخدام الكمبيوتر (MDL)</h3><p>في عام 2012 قام نادي التكنولوجيا بعمل شراكة مع شركة ميكروسوفت – مكتب الولايات المتحدة الامريكية لتقديم تدريب الأساسيات اللازمة لاستخدام الكمبيوتر Microsoft Digital Literacy وقد حصلت الجمعية على موافقة من الشركة بتقديم التدريب بمقابل مادى بسيط.
+
+تم التعاقد مع جمعية رعاية المعلمين بالدير بمدينة إسنا ، جمعية تنمية المجتمع بدراو فرع الأقصر و مكتبة مصر العامة بالأقصر لتقديم التدريب تحت إشراف نادي التكنولوجيا بنجع خميس. وتم تدريب وامتحان عدد 200 متدرب.</p></div></div><hr class="project-divider"></div>
+                <div class="horizontal-project"><div class="project-card-row flex-row-reverse"><div class="p-img"><div class="polaroid rotate-left"><img src="images/menaa14.jpg"></div></div><div class="p-info text-dark"><h3>الرخصة الدولية لقيادة الحاسب الآلي (ICDL)</h3><p></p></div></div></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Partners (الشركاء المتحرك) -->
+    <section class="py-5 bg-light overflow-hidden" id="partners">
+        <div class="container text-center">
+            <h2 class="fw-bold mb-5 section-title text-dark">شركاء النجاح</h2>
+            <div class="logos-slider">
+                <div class="logos-track">
+                    <img src="images/1.png" alt="P1"> <img src="images/2.png" alt="P2">
+                    <img src="images/3.png" alt="P3"> <img src="images/4.png" alt="P4">
+                    <img src="images/5.png" alt="P1"> <img src="images/7.png" alt="P2">
+                    <img src="images/8.png" alt="P3"> <img src="images/10.png" alt="P4">
+                    <img src="images/11.png" alt="P3"> <img src="images/10.png" alt="P4"> 
+                    <img src="images/11.png" alt="P3"> <img src="images/12.png" alt="P4">
+                    <img src="images/13.png" alt="P3"> <img src="images/14.png" alt="P4">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Us (تواصل معنا) -->
+    <section class="py-5 bg-white" id="contact">
+        <div class="container">
+            <h2 class="fw-bold text-center section-title mb-5 text-dark">تواصل معنا</h2>
+            <div class="row g-5">
+                <div class="col-lg-6">
+                    <div class="contact-card p-5 bg-dark text-white rounded-4 shadow h-100">
+                        <h4 class="mb-4">بيانات الجمعية</h4>
+                        <p class="mb-3"><i class="fas fa-phone-alt text-primary me-2"></i> 01145029933 / 01114470448</p>
+                        <p class="mb-3"><i class="fas fa-map-marker-alt text-primary me-2"></i> نجع خميس، العديسات قبلي، الأقصر</p>
+                        <p class="mb-3"><i class="fas fa-envelope text-primary me-2"></i> info@datank.com</p>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <form class="p-4 bg-light rounded-4 shadow-sm border h-100">
+                        <input type="text" class="form-control mb-3 rounded-pill" placeholder="الاسم">
+                        <input type="email" class="form-control mb-3 rounded-pill" placeholder="البريد">
+                        <textarea class="form-control mb-3 rounded-4" rows="5" placeholder="رسالتك"></textarea>
+                        <button type="submit" class="btn btn-primary w-100 rounded-pill py-2 fw-bold">إرسال</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-dark text-white py-4 text-center">
+        <p>جميع الحقوق محفوظة &copy; 2026 | تصميم <span class="text-primary fw-bold">أسماء صبري محمد قناوي</span></p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
