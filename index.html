@@ -4,45 +4,48 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>جمعية DATA | التنمية والتكنولوجيا</title>
-    <!-- CSS Links -->
+    
+    <link rel="icon" type="image/png" href="images/data.png">
+    
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.rtl.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<!-- Nav Bar المعدل -->
+<!-- Nav Bar المعدل بالكامل ليكون في المنتصف -->
 <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top shadow-sm">
-    <div class="container d-flex justify-content-center"> <!-- التمركز هنا -->
-        <div class="nav-wrapper d-flex align-items-center w-100 justify-content-between">
-            
-            <!-- اللوجو -->
-            <a class="navbar-brand" href="#home">
-                <img src="images/data.png" alt="DATA Logo" style="height: 60px; width: auto;">
-            </a>
+    <div class="container"> 
+        
+        <!-- اللوجو (على اليمين) -->
+        <a class="navbar-brand" href="#home">
+            <img src="images/data.png" alt="DATA Logo" style="height: 60px; width: auto;">
+        </a>
 
-            <!-- زر الموبايل -->
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
+        <!-- زر الموبايل -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
 
-            <!-- الروابط -->
-            <div class="collapse navbar-collapse flex-grow-0" id="navbarNav">
-                <ul class="navbar-nav gap-3"> <!-- gap-3 تتحكم في المسافة بين الروابط -->
-                    <li class="nav-item"><a class="nav-link fw-bold" href="#home">الرئيسية</a></li>
-                    <li class="nav-item"><a class="nav-link fw-bold" href="#about">من نحن</a></li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle fw-bold" href="#" id="projectsDrop" data-bs-toggle="dropdown">المشروعات</a>
-                        <ul class="dropdown-menu shadow border-0">
-                            <li><a class="dropdown-item text-end" href="#projects" onclick="showSector('dev', event)">قطاع التنمية</a></li>
-                            <li><a class="dropdown-item text-end" href="#projects" onclick="showSector('tech', event)">قطاع التكنولوجيا</a></li>
-                        </ul>
-                    </li>
-                    <li class="nav-item"><a class="nav-link fw-bold" href="#partners">شركاؤنا</a></li>
-                    <li class="nav-item"><a class="nav-link fw-bold" href="#contact">تواصل معنا</a></li>
-                </ul>
-            </div>
+        <!-- الروابط (تم إضافة ms-auto و me-auto لجعلها في المنتصف تماماً) -->
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto me-auto gap-3"> <!-- ms-auto و me-auto هما السر في التمركز -->
+                <li class="nav-item"><a class="nav-link fw-bold" href="#home">الرئيسية</a></li>
+                <li class="nav-item"><a class="nav-link fw-bold" href="#about">من نحن</a></li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle fw-bold" href="#" id="projectsDrop" data-bs-toggle="dropdown">المشروعات</a>
+                    <ul class="dropdown-menu shadow border-0 text-end">
+                        <li><a class="dropdown-item" href="#projects" onclick="showSector('dev', event)">قطاع التنمية</a></li>
+                        <li><a class="dropdown-item" href="#projects" onclick="showSector('tech', event)">قطاع التكنولوجيا</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item"><a class="nav-link fw-bold" href="#partners">شركاؤنا</a></li>
+                <li class="nav-item"><a class="nav-link fw-bold" href="#contact">تواصل معنا</a></li>
+            </ul>
         </div>
+        
+        <!-- مساحة فارغة وهمية لموازنة اللوجو (اختياري لجعل الروابط في منتصف الشاشة بالضبط) -->
+        <div class="d-none d-lg-block" style="width: 150px;"></div> 
     </div>
 </nav>
     <!-- Hero Header -->
@@ -187,12 +190,12 @@
             <div class="logos-slider">
                 <div class="logos-track">
                     <img src="images/1.png" alt="P1"> <img src="images/2.png" alt="P2">
-                    <img src="images/3.png" alt="P3"> <img src="images/4.png" alt="P4">
-                    <img src="images/5.png" alt="P1"> <img src="images/7.png" alt="P2">
-                    <img src="images/8.png" alt="P3"> <img src="images/10.png" alt="P4">
-                    <img src="images/11.png" alt="P3"> <img src="images/10.png" alt="P4"> 
-                    <img src="images/11.png" alt="P3"> <img src="images/12.png" alt="P4">
-                    <img src="images/13.png" alt="P3"> <img src="images/14.png" alt="P4">
+                    <img src="images/3.png" alt="P3"> <img src="images/5.png" alt="P5">
+                    <img src="images/6.png" alt="P6"> <img src="images/7.png" alt="P7">
+                    <img src="images/8.png" alt="P8"> 
+                    <img src="images/10.png" alt="P10"> <img src="images/11.png" alt="P11"> 
+                    <img src="images/12.png" alt="P12"> <img src="images/13.png" alt="P13">
+                    <img src="images/14.png" alt="P14"> <img src="images/15.png" alt="P15">
                 </div>
             </div>
         </div>
